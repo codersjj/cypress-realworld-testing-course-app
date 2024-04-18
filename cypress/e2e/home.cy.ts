@@ -19,6 +19,7 @@ describe('home page', () => {
   context('Course section', () => {
     it.only('Course: Testing Your First Next.js Application', () => {
       cy.getByData('course-0').find('a').contains('Get started').click()
+      cy.location('pathname').should('eq', '/testing-your-first-application')
     })
   })
 })
