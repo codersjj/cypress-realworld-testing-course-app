@@ -15,4 +15,10 @@ describe('home page', () => {
       cy.get('dt').eq(2).contains('Free and Open Source')
     })
   })
+
+  context('Course section', () => {
+    it.only('Course: Testing Your First Next.js Application', () => {
+      cy.getByData('course-0').find('a').contains('Get started').click()
+    })
+  })
 })
